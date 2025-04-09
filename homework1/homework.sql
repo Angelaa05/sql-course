@@ -1,113 +1,112 @@
 -- Student Table
 DROP TABLE IF EXISTS student;
 CREATE TABLE student (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO student (id, columnname, datatype, allownulls)
+INSERT INTO student (column_name, Data_Type, Allow_Nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'FirstName', 'varchar(20)', ''),
-    (3, 'LastName', 'varchar(30)', ''),
-    (4, 'DateOfBirth', 'date', ''),
-    (5, 'EnrolledDate', 'date', ''),
-    (6, 'Gender', 'char(1)', ''),
-    (7, 'NationalIDNumber', 'Integer', ''),
-    (8, 'StudentCardNumber', 'Numeric', '');
+    ('ID', 'Integer', ''),
+    ('FirstName', 'varchar(20)', ''),
+    ('LastName', 'varchar(30)', ''),
+    ('DateOfBirth', 'date', ''),
+    ('EnrolledDate', 'date', ''),
+    ('Gender', 'char(1)', ''),
+    ('NationalIDNumber', 'Integer', ''),
+    ('StudentCardNumber', 'Numeric', '');
 
 SELECT * FROM student;
 
 -- Teacher Table
+DROP TABLE IF EXISTS teacher;
 CREATE TABLE teacher (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO teacher (id, columnname, datatype, allownulls)
+INSERT INTO teacher (column_name , data_type, allow_nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'FirstName', 'varchar(20)', ''),
-    (3, 'LastName', 'varchar(30)', ''),
-    (4, 'DateOfBirth', 'date', ''),
-    (5, 'AcademicRank', 'varchar(20)', ''),
-    (6, 'HireDate', 'date', '');
+    ('id', 'Integer', ''),
+    ('FirstName', 'varchar(20)', ''),
+    ('LastName', 'varchar(30)', ''),
+    ('DateOfBirth', 'date', ''),
+    ('AcademicRank', 'varchar(20)', ''),
+    ('HireDate', 'date', '');
 
 SELECT * FROM teacher;
 
 -- GradeDetails Table
+DROP TABLE IF EXISTS gradeDetails;
 CREATE TABLE gradeDetails (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO gradeDetails (id, columnname, datatype, allownulls)
+INSERT INTO gradeDetails (column_name, data_type, allow_nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'GradeID', 'Integer', ''),
-    (3, 'AchievementTypeID', 'Integer', ''),
-    (4, 'AchievementPoints', 'varchar(20)', ''),
-    (5, 'AchievementMaxPoints', 'varchar(20)', ''),
-    (6, 'AchievementDate', 'varchar(20)', '');
+    ('ID', 'Integer', ''),
+    ('GradeID', 'Integer', ''),
+    ('AchievementTypeID', 'Integer', ''),
+    ('AchievementPoints', 'varchar(20)', ''),
+    ('AchievementMaxPoints', 'varchar(20)', ''),
+    ('AchievementDate', 'varchar(20)', '');
 
 SELECT * FROM gradeDetails;
 
 -- Course Table
+DROP TABLE IF EXISTS course;
 CREATE TABLE course (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO course (id, columnname, datatype, allownulls)
+INSERT INTO course (column_name, data_type, allow_nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'name', 'varchar(50)', ''),
-    (3, 'credit', 'varchar(10)', ''),
-    (4, 'academicYear', 'varchar(4)', ''),
-    (5, 'semester', 'varchar(10)', '');
+    ('ID', 'Integer', ''),
+    ('Name', 'varchar(50)', ''),
+    ('Credit', 'varchar(10)', ''),
+    ('AcademicYear', 'varchar(4)', ''),
+    ('Semester', 'varchar(10)', '');
 
 SELECT * FROM course;
 
 -- Grade Table
+DROP TABLE IF EXISTS grade;
 CREATE TABLE grade (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO grade (id, columnname, datatype, allownulls)
+INSERT INTO grade (column_name, data_type, allow_nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'studentID', 'Integer', ''),
-    (3, 'courseID', 'Integer', ''),
-    (4, 'teacherID', 'Integer', ''),
-    (5, 'grade', 'varchar(20)', ''),
-    (6, 'comment', 'varchar(50)', '');
+    ('ID', 'Integer', ''),
+    ('StudentID', 'Integer', ''),
+    ('CourseID', 'Integer', ''),
+    ('TeacherID', 'Integer', ''),
+    ('Grade', 'varchar(20)', ''),
+    ('Comment', 'varchar(50)', '');
 
 SELECT * FROM grade;
 
 -- AchievementType Table
-CREATE TABLE achievementType (
-    id INTEGER,
-    columnname VARCHAR(100),
-    datatype VARCHAR(100),
-    allownulls VARCHAR(100)
+DROP TABLE IF EXISTS AchievementType;
+CREATE TABLE AchievementType(
+    column_name VARCHAR(100),
+    data_type VARCHAR(100),
+    allow_nulls VARCHAR(100)
 );
 
-INSERT INTO achievementType (id, columnname, datatype, allownulls)
+INSERT INTO AchievementType (column_name, data_type, allow_nulls)
 VALUES
-    (1, 'id', 'Integer', ''),
-    (2, 'name', 'varchar(50)', ''),
-    (3, 'description', 'varchar(100)', ''),
-    (4, 'participationName', 'varchar(20)', '');
+    ('ID', 'Integer', ''),
+    ('Name', 'varchar(50)', ''),
+    ('Description', 'varchar(100)', ''),
+    ('ParticipationName', 'varchar(20)', '');
 
-SELECT * FROM achievementType;
+SELECT * FROM AchievementType;
